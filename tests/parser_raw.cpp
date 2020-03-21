@@ -20,8 +20,8 @@
 
 #include <iostream>
 #include "hexutils.h"
-#include <lib/parser.h>
-#include <lib/parser_txdef.h>
+#include <parser.h>
+#include <parser_txdef.h>
 
 using ::testing::TestWithParam;
 using ::testing::Values;

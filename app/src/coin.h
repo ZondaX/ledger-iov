@@ -39,6 +39,16 @@ extern "C" {
 #define IOV_WHOLE_DIGITS   15
 #define IOV_FRAC_DIGITS    9
 
+#define MENU_MAIN_APP_LINE1 "IOV"
+
+#ifdef MAINNET_ENABLED
+#define MENU_MAIN_APP_LINE2 "Mainnet"
+#else
+#define MENU_MAIN_APP_LINE2 "Testnet"
+#endif
+
+#define VIEW_ADDRESS_BUFFER_OFFSET    (PK_LEN)
+
 #ifdef __cplusplus
 }
 #endif
