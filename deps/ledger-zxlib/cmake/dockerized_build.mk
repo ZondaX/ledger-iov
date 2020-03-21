@@ -50,7 +50,7 @@ check_python:
 
 deps: check_python
 	@echo "Install dependencies"
-	$(CURDIR)/src/install_deps.sh
+	$(CURDIR)/deps/ledger-zxlib/install_deps.sh
 
 pull:
 	docker pull $(DOCKER_IMAGE)
@@ -77,10 +77,6 @@ debug: build
 
 emu: build
 	$(call run_docker,$(DOCKER_BOLOS_SDK),/home/test/speculos/speculos.py -o -z 3 -v 8001 $(DOCKER_APP_SRC)/bin/app.elf)
-
-deps:
-	@echo "Install dependencies"
-	$(CURDIR)/install_deps.sh
 
 load:
 	${LEDGER_SRC}/pkg/zxtool.sh load
@@ -118,6 +114,3 @@ dev_ca2: check_python
 
 dev_ca_delete2: check_python
 	@python -m ledgerblue.resetCustomCA --targetId 0x33000004
-
-update_zxlib:
-	rsync -a --exclude='.git/' ../ledger-zxlib $(CURDIR)/deps
