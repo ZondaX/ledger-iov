@@ -25,9 +25,9 @@ extern "C" {
 #define HDPATH_0_DEFAULT     (0x80000000u | 0x2cu)
 #define HDPATH_1_DEFAULT     (0x80000000u | 0xeau)
 
-#define APP_MAINNET_HRP          "iov"
-#define APP_MAINNET_CHAINID      "iov-mainnet"
-#define APP_MAINNET_CHAINID_LEN   11
+#define APP_MAINNET_HRP                "iov"
+#define APP_MAINNET_CHAINID_PREFIX     "iov-mainnet"
+#define APP_MAINNET_CHAINID_PREFIX_LEN  11
 
 #define APP_TESTNET_HRP          "tiov"
 
